@@ -3,7 +3,7 @@ authors = ["Martijn Gribnau"]
 language = "en"
 multilingual = false
 src = "src"
-title = "The cargo-msrv Book 🦀"
+title = "The cargo-msrv book 🦀"
 
 [output.html]
 git-repository-url = "https://github.com/foresterre/cargo-msrv"
