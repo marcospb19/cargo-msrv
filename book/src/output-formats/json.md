@@ -39,14 +39,14 @@ which an event took place.
 
 **fields:**
 
-| name           | description                                                                                             |
-|----------------|---------------------------------------------------------------------------------------------------------|
-| instance       | Name of the running `cargo-msrv` program as defined on compile time. This will usually be `cargo-msrv`. |
-| version        | Version of the running `cargo-msrv` program as defined on compile time.                                 |
-| sha_short      | Short SHA hash of the git commit used to compile and build `cargo-msrv`.                                |
-| target_triple  | Target triple of toolchain used to compile and build `cargo-msrv`.                                      |
-| cargo_features | Features which were enabled during the compilation of `cargo-msrv`.                                     |
-| rustc          | Version of `rustc` used to compile `cargo-msrv`.                                                        |
+| name           | optional | description                                                                                             |
+|----------------|----------|---------------------------------------------------------------------------------------------------------|
+| instance       | no       | Name of the running `cargo-msrv` program as defined on compile time. This will usually be `cargo-msrv`. |
+| version        | no       | Version of the running `cargo-msrv` program as defined on compile time.                                 |
+| sha_short      | no       | Short SHA hash of the git commit used to compile and build `cargo-msrv`.                                |
+| target_triple  | no       | Target triple of toolchain used to compile and build `cargo-msrv`.                                      |
+| cargo_features | no       | Features which were enabled during the compilation of `cargo-msrv`.                                     |
+| rustc          | no       | Version of `rustc` used to compile `cargo-msrv`.                                                        |
 
 **example:**
 
@@ -64,9 +64,9 @@ reports that the index is being fetched, and details which source is used.
 
 **fields:**
 
-| name           | description                                               |
-|----------------|-----------------------------------------------------------|
-| source         | Place from where the available Rust releases are obtained |
+| name           | optional | description                                               |
+|----------------|----------|-----------------------------------------------------------|
+| source         | no       | Place from where the available Rust releases are obtained |
 
 **example:**
 
@@ -87,11 +87,11 @@ This event is called as a scoped event, and within it's scope, you'll find the f
 
 **fields:**
 
-| name              | description                              |
-|-------------------|------------------------------------------|
-| toolchain         | The toolchain to be located or installed |
-| toolchain.version | The Rust version of the toolchain        |
-| toolchain.target  | The target-triple of the toolchain       |
+| name              | optional | description                              |
+|-------------------|----------|------------------------------------------|
+| toolchain         | no       | The toolchain to be located or installed |
+| toolchain.version | no       | The Rust version of the toolchain        |
+| toolchain.target  | no       | The target-triple of the toolchain       |
 
 **example:**
 
@@ -110,11 +110,11 @@ crate, is by installing a toolchain and using it to check a crate for compatibil
 
 **fields:**
 
-| name              | description                              |
-|-------------------|------------------------------------------|
-| toolchain         | The toolchain to be located or installed |
-| toolchain.version | The Rust version of the toolchain        |
-| toolchain.target  | The target-triple of the toolchain       |
+| name              | optional | description                              |
+|-------------------|----------|------------------------------------------|
+| toolchain         | no       | The toolchain to be located or installed |
+| toolchain.version | no       | The Rust version of the toolchain        |
+| toolchain.target  | no       | The target-triple of the toolchain       |
 
 **example:**
 
